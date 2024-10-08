@@ -11,7 +11,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddSingleton<ExperienceRepository>();
+builder.Services.AddScoped<ExperienceRepository>();
 
 builder.Services.AddDbContext<ApplicationContext>(options => options.UseSqlite(
 builder.Configuration["ConnectionStrings:DBConnectionString"]));
